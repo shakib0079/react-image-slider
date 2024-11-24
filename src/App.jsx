@@ -20,11 +20,12 @@ function App() {
   let [image, setImage] = useState(1);
 
   function increament(){
-    if(image < images.length){
-      setImage(image + 1)
-    }else{
-      setImage(image = 1);
-    }
+    // if(image < images.length){
+    //   setImage(image + 1)
+    // }else{
+    //   setImage(image = 1);
+    // }
+    (image < images.length) ? setImage(image + 1) : setImage(image = 1);
   }
   
   function decrement(){
