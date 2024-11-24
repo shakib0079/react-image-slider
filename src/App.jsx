@@ -5,6 +5,7 @@ import ImageSlider from './components/ImageSlider'
 import { useState } from 'react'
 const divStyle = {
   display: "flex",
+  gap: "30px",
   flexDirection: "column",
   justifyContent: "center",
   alignItems: "center",
@@ -13,10 +14,6 @@ const buttonDiv = {
   display: "flex",
   gap: "10px",
 }
-
-
-
-
 
 function App() {
 
@@ -38,10 +35,12 @@ function App() {
     }
   }
 
+  const img = images.filter((img) => img.id === image)
+
   return (
     <>  
       <div style={divStyle}>
-        <ImageSlider imageID={image} />
+        <ImageSlider {...img[0]}/>
         <div style={buttonDiv}>
           <Button title="<Previous" handler={decrement}/>
           <Button title="Next>" handler={increament}/>

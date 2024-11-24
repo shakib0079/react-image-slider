@@ -1,5 +1,4 @@
  /* eslint-disable react/prop-types */
-import { images } from "../assets/storage/storage";
  const imgStyle = {
     width: "100%",
     borderRadius: "10px"
@@ -10,11 +9,10 @@ const imgDiv = {
     transition: "transform 0.5s ease-in-out",
 }
 
-export default function ImageSlider({imageID}) {
-    const imgFill = images.filter((image) => image.id === imageID)
+export default function ImageSlider({id, image_url}) {
   return (
         <div style={imgDiv}>
-            {imgFill.map((data) => <img key={data.id}src={data.image_url} style={imgStyle} alt="" />)}
+            <img key={id}src={image_url} style={imgStyle} alt="" />
         </div>
   )
 }
