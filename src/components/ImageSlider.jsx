@@ -1,11 +1,12 @@
  /* eslint-disable react/prop-types */
+ 
  const imgStyle = {
     width: "100%",
     borderRadius: "10px"
  }
 
 const imgDiv = {
-    width: "600px",
+    width: "800px",
     transition: "transform 0.5s ease-in-out",
 }
 

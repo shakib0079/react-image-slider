@@ -32,6 +32,7 @@ function App() {
   return (
     <>  
       <div style={divStyle}>
+        <h1>React Image Slider</h1>
         <ImageSlider {...img[0]}/>
         <div style={buttonDiv}>
           <Button title="<Previous" handler={decrement}/>
