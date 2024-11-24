@@ -20,20 +20,11 @@ function App() {
   let [image, setImage] = useState(1);
 
   function increament(){
-    // if(image < images.length){
-    //   setImage(image + 1)
-    // }else{
-    //   setImage(image = 1);
-    // }
     (image < images.length) ? setImage(image + 1) : setImage(image = 1);
   }
   
   function decrement(){
-    if(image > 1){
-      setImage(image - 1)
-    }else{
-      setImage(image = images.length);
-    }
+    (image > 1) ? setImage(image - 1) : setImage(image = images.length);
   }
 
   const img = images.filter((img) => img.id === image)
